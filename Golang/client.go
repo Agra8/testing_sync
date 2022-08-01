@@ -1,5 +1,5 @@
 /*
- * Tunas Toyota
+ * MyApp
  *
  * This is a simple API
  *
@@ -38,7 +38,7 @@ var (
 	xmlCheck  = regexp.MustCompile("(?i:(?:application|text)/xml)")
 )
 
-// APIClient manages communication with the Tunas Toyota API v1.0.0
+// APIClient manages communication with the MyApp API v1.0.0
 // In most cases there should be only one, shared, APIClient.
 type APIClient struct {
 	cfg    *Configuration
