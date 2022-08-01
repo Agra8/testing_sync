@@ -1,0 +1,45 @@
+---
+swagger: "2.0"
+info:
+  description: This is a simple API
+  version: 1.0.0
+  title: MyApp
+  contact:
+    email: you@your-company.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+host: virtserver.swaggerhub.com
+basePath: /Agra8/Test/1.0.0
+schemes:
+- https
+paths:
+  /loginv2.php:
+    post:
+      tags:
+      - Auth
+      summary: Login
+      description: Login to Ttsm
+      operationId: login
+      consumes:
+      - multipart/form-data
+      produces:
+      - application/json
+      parameters:
+      - name: username
+        in: formData
+        description: username
+        required: false
+        type: string
+      - name: password
+        in: formData
+        description: password
+        required: false
+        type: string
+      responses:
+        "200":
+          description: login success
+        "400":
+          description: "invalid input, object invalid"
+        "409":
+          description: an existing item already exists
